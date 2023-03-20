@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  transactional:
+    image: postgres:12
+    environment:
+      POSTGRES_DB: dvdrental
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    volumes:
+      - postgres:/var/lib/postgresql/data
+      - ./data/dvdrental.sql:/docker-entrypoint-initdb.d/dvdrental.sql
+    ports:
+      - 5432:5432
+
+  analytics:
+    image: postgres:12
+    environment:
+      POSTGRES_DB: analytics
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+      - 5440:5432
+
+volumes:
+    postgres:
