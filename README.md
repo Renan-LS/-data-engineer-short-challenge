@@ -1,6 +1,23 @@
-# Seja bem vindo ao desafio de engenharia de dados da Refera!
+# Resolução desafio de engenheria de dados da REFERA #
+- Segue resolução do desafio de Engenharia de dados da REFERA no qual foram criados 02(dois) scripts em *python* que realizam o trabalho de EL(Extract and Load).
+  - No script **main_local.py**, é realizado a rotina de extração total de todas as tabelas do banco de dados `transactional` e carregadas para o banco de dados `analytics`. [Objetivo do desafio]
+  
+  - Já o script **main.py** é usado em conjunto com docker-compose.yml[modificado]. Este compose é responsável não só por upar os containers contendo os bancos de dados `transactional` e `analytics`. Ele também upa um serviço contendo `Python 3.9` e todas as dependencias necessárias para rodar o script main.py, realizando assim o pipeline de Extração e Carregamento dos dados totalmente via DOCKER. [Diferencial na implementação]
 
-⚠️⚠️ Não faça fork deste repositório!
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Seja bem vindo ao desafio de engenharia de dados da Refera!
 
 
 O objetivo desse desafio é ser algo rápido para exemplificar alguns desafios do dia a dia de quem trabalha com dados. Queremos com esse desafio avaliar o seu conhecimento básico em programação, banco de dados e entender mais quais as boas práticas você segue para construção de código.
@@ -34,22 +51,3 @@ Com o docker compose instalado, basta executar:
 cd refera-data-engineer-short-challenge
 docker-compose up
 ```
-
-## Entrega
-
-Subir os códigos em um repositório seu público no Github e enviar por email.
-
-⚠️⚠️ Não faça fork deste repositório!
-
-## Observações
-
-- Escolha a linguagem de programação que quiser, mas evite ambientes complexos.
-- Use bibliotecas de código aberto e escreva seu próprio código.
-- É importante lembrar que precisaremos executar seu código.
-
-## Links Úteis
-
-- [Transactional vs. Analytical Workloads](https://www.youtube.com/watch?v=ivSPZB6zUKY)
-- [Docker Docs](https://docs.docker.com/)
-- [Docker em 22 minutos - teoria e prática](https://www.youtube.com/watch?v=Kzcz-EVKBEQ)
-- [Docker Compose na prática](https://www.youtube.com/watch?v=HxPz3eLnXZk)
