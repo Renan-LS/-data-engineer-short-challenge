@@ -1,42 +1,4 @@
-# version: '3'
-
-# services:
-#   transactional:
-#     image: postgres:12
-#     environment:
-#       POSTGRES_DB: dvdrental
-#       POSTGRES_USER: postgres
-#       POSTGRES_PASSWORD: password
-#     volumes:
-#       - postgres:/var/lib/postgresql/data
-#       - ./data/dvdrental.sql:/docker-entrypoint-initdb.d/dvdrental.sql
-#     ports:
-#       - 5432:5432
-
-#   analytics:
-#     image: postgres:12
-#     environment:
-#       POSTGRES_DB: analytics
-#       POSTGRES_USER: postgres
-#       POSTGRES_PASSWORD: password
-#     ports:
-#       - 5440:5432
-
-#   python:
-#     image: python:3.9
-#     volumes:
-#       - ./main.py:/app/main.py
-#     command: bash -c "pip install sqlalchemy==1.4.23 pandas psycopg2-binary && python /app/main.py"
-#     depends_on:
-#       - transactional
-#       - analytics
-# volumes:
-#     postgres:
-
 version: '3'
-
-networks:
-  my-network:
 
 services:
   transactional:
@@ -50,8 +12,6 @@ services:
       - ./data/dvdrental.sql:/docker-entrypoint-initdb.d/dvdrental.sql
     ports:
       - 5432:5432
-    networks:
-      - my-network
 
   analytics:
     image: postgres:12
@@ -61,19 +21,18 @@ services:
       POSTGRES_PASSWORD: password
     ports:
       - 5440:5432
-    networks:
-      - my-network
 
   python:
     image: python:3.9
     volumes:
       - ./main.py:/app/main.py
-    command: bash -c "pip install sqlalchemy==1.4.23 pandas psycopg2-binary && python /app/main.py"
+    command: bash -c "pip install sqlalchemy==1.4.31 pandas psycopg2-binary && python /app/main.py"
     depends_on:
       - transactional
       - analytics
-    networks:
-      - my-network
-
 volumes:
     postgres:
+
+#Foi necessário realizar um downgrade do SQLalchemy devido a um bug entre as versões Pandas 1.x e SQLalchemy 2.x
+#no qual não possibilitava o perfeito funcionamento do método read_sql_query().
+#https://github.com/pandas-dev/pandas/issues/51015
