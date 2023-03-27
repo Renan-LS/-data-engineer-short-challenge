@@ -42,7 +42,7 @@ Clone o repositório:
 
 
 ```bash
-git clone https://github.com/Refera-Tech/refera-data-engineer-short-challenge
+git clone https://github.com/Renan-LS/-refera-data-engineer-short-challenge
 ```
 
 Com o docker compose instalado, basta executar:
