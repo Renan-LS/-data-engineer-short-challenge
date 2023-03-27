@@ -1,18 +1,10 @@
 # Resolução desafio de engenheria de dados da REFERA #
 - Segue resolução do desafio de Engenharia de dados da REFERA no qual foram criados 02(dois) scripts em *python* que realizam o trabalho de EL(Extract and Load).
-  - No script **main_local.py**, é realizado a rotina de extração total de todas as tabelas do banco de dados `transactional` e carregadas para o banco de dados `analytics`. [Objetivo do desafio]
+  - No script **main_local.py**, é realizado a rotina de extração total de todas as tabelas do banco de dados `transactional` e carregadas para o banco de dados `analytics`. [Objetivo do desafio - **Solução 1**]
   
-  - Já o script **main.py** é usado em conjunto com docker-compose.yml[modificado]. Este compose é responsável não só por upar os containers contendo os bancos de dados `transactional` e `analytics`. Ele também upa um serviço contendo `Python 3.9` e todas as dependencias necessárias para rodar o script main.py, realizando assim o pipeline de Extração e Carregamento dos dados totalmente via DOCKER. [Diferencial na implementação]
+  - Já o script **main.py** é usado em conjunto com docker-compose.yml[modificado]. Este compose é responsável não só por upar os containers contendo os bancos de dados `transactional` e `analytics`. Ele também upa um serviço contendo `Python 3.9` e todas as dependencias necessárias para rodar o script main.py, realizando assim o pipeline de Extração e Carregamento dos dados totalmente via DOCKER. [Diferencial na implementação - **Solução 2**]
 
-
-
-
-
-
-
-
-
-
+*PS: Tanto para solução 1, quanto para solução 2, é necessário que seja realizado os passos descritos ao fim desta página: realização do Git Clone com a posterior execução do Compose.*
 
 
 
