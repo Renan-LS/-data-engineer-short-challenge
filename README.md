@@ -48,6 +48,6 @@ git clone https://github.com/Renan-LS/-refera-data-engineer-short-challenge
 Com o docker compose instalado, basta executar:
 
 ```bash
-cd refera-data-engineer-short-challenge
+cd -refera-data-engineer-short-challenge
 docker-compose up
 ```
