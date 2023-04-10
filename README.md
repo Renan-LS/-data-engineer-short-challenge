@@ -1,5 +1,5 @@
-# Resolução desafio de engenheria de dados da REFERA #
-- Segue resolução do desafio de Engenharia de dados da REFERA no qual foram criados 02(dois) scripts em *python* que realizam o trabalho de EL(Extract and Load).
+# Resolução desafio de engenheria de dados da Empresa X #
+- Segue resolução do desafio de Engenharia de dados da Empresa X no qual foram criados 02(dois) scripts em *python* que realizam o trabalho de EL(Extract and Load).
   - No script **main_local.py**, é realizado a rotina de extração total de todas as tabelas do banco de dados `transactional` e carregadas para o banco de dados `analytics`. [Objetivo do desafio - **Solução 1**]
   
   - Já o script **main.py** é usado em conjunto com docker-compose.yml[modificado]. Este compose é responsável não só por upar os containers contendo os bancos de dados `transactional` e `analytics`. Ele também upa um serviço contendo `Python 3.9` e todas as dependencias necessárias para rodar o script main.py, realizando assim o pipeline de Extração e Carregamento dos dados totalmente via DOCKER. [Diferencial na implementação - **Solução 2**]
@@ -9,7 +9,7 @@
 
 
 
-## Seja bem vindo ao desafio de engenharia de dados da Refera!
+## Seja bem vindo ao desafio de engenharia de dados da Empresa X!
 
 
 O objetivo desse desafio é ser algo rápido para exemplificar alguns desafios do dia a dia de quem trabalha com dados. Queremos com esse desafio avaliar o seu conhecimento básico em programação, banco de dados e entender mais quais as boas práticas você segue para construção de código.
